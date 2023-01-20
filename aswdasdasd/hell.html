@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Page</title>
+<style>
+  #image {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div style="text-align:center;">
+  <p id="caption">Click here to enter</p>
+  <br>
+  <img id="image" src="L.png" alt="L Image">
+  <audio id="audio" loop>
+    <source src="getFucked.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
+<script>
+    var image = document.getElementById("image");
+    var caption = document.getElementById("caption");
+    var audio = document.getElementById("audio");
+    document.addEventListener("click", function(){
+        image.style.display = "block";
+        caption.style.display = "none";
+        audio.play();
+    });
+</script>
+
+</body>
+</html>
