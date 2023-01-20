@@ -57,16 +57,45 @@
       <button type="button" onclick="checkPassword()">Submit</button>
     </form>
     <script>
-      var validPasswords = ["cb2442", "as72", "hq187", "17sh"];
-      function checkPassword() {
-        var password = document.getElementById("passwordInput").value;
-        if (validPasswords.includes(password)) {
-          window.location.href = "index.html";
-          validPasswords.splice(validPasswords.indexOf(password), 1);
-        } else {
-          alert("Incorrect password. Please try again.");
+  var validPasswords = ["cb2442", "as72", "hq187", "17sh"];
+
+function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+    if (validPasswords.includes(password)) {
+        setCookie("loggedIn", true, 1);
+        window.location.href = "index.html";
+        validPasswords.splice(validPasswords.indexOf(password), 1);
+    } else {
+        alert("Incorrect password. Please try again.");
+    }
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays 365*24*60*60*1000));
+    var expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
         }
-      }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+if (getCookie("loggedIn") == "true") {
+    window.location.href = "index.html";
+}
     </script>
   </body>
 </html>
