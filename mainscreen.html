@@ -57,14 +57,20 @@
         requestAnimationFrame(animate);
       }
       animate();
-        function checkCookie() {
-    var loggedIn = document.cookie.replace(/(?:(?:^|.*;\s*)loggedIn\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-    if (loggedIn == "false") {
+<script>
+  function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
+  }
+  function checkCookie() {
+    if(!getCookie("loggedIn")){
       window.location.href = "aswdasdasd/hell.html";
     }
   }
   checkCookie();
 </script>
+
     </script>
   </body>
 </html>
