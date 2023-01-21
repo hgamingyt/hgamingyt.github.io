@@ -33,12 +33,12 @@
           opacity: 1;
         }
       }
-           .box {
-        background-color:blue;
-        width: 50%;
-        height: 30%;
+      .box {
+        background-color: #0f0f0f; /* dark background color */
+        width: 80%;
+        height: 60%;
+        border: solid 2px #2196F3; /* blue border */
         border-radius: 25px;
-        box-shadow: 10px 10px 5px #888888;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -48,8 +48,21 @@
         opacity: 0;
         animation: fadeIn 2s ease-in-out 4s forwards;
       }
+      #games-list {
+        color: #2196F3; /* blue text color */
+        font-family: 'Source Code Pro', monospace; /* hacking-inspired font */
+        font-size: 32px;
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out 4s forwards;
+      }
+      #games-list a {
+        color: #2196F3; /* blue text color */
+        text-decoration: none;
+        margin: 0 10px;
+      }
     </style>
- <div class="box">
+       <div class="box">
       <div id="games-list">
         <a href="games/DogeMiner/index.html">Doge Miner</a>
         <a href="games/motox3m/index.html">MotoX3M</a>
