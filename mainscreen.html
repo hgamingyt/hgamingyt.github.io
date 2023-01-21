@@ -1,8 +1,37 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <title>Goofy Ahhh Website</title>
     <style>
+         .box {
+        background-color: #0f0f0f; /* dark background color */
+        width: 80%;
+        height: 60%;
+        border: solid 2px #2196F3; /* blue border */
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align:center;
+        padding: 20px;
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out 4s forwards;
+      }
+      #games-list {
+        color: #2196F3; /* blue text color */
+        font-family: 'Source Code Pro', monospace; /* hacking-inspired font */
+        font-size: 32px;
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 2s ease-in-out 4s forwards;
+      }
+      #games-list a {
+        color: #2196F3; /* blue text color */
+        text-decoration: none;
+        margin: 0 10px;
+      }
       body{
         margin:0;
         padding:0;
@@ -33,34 +62,6 @@
           opacity: 1;
         }
       }
-      .box {
-        background-color: #0f0f0f; /* dark background color */
-        width: 80%;
-        height: 60%;
-        border: solid 2px #2196F3; /* blue border */
-        border-radius: 25px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align:center;
-        padding: 20px;
-        opacity: 0;
-        animation: fadeIn 2s ease-in-out 4s forwards;
-      }
-      #games-list {
-        color: #2196F3; /* blue text color */
-        font-family: 'Source Code Pro', monospace; /* hacking-inspired font */
-        font-size: 32px;
-        text-align: center;
-        opacity: 0;
-        animation: fadeIn 2s ease-in-out 4s forwards;
-      }
-      #games-list a {
-        color: #2196F3; /* blue text color */
-        text-decoration: none;
-        margin: 0 10px;
-      }
     </style>
        <div class="box">
       <div id="games-list">
@@ -70,7 +71,9 @@
         <a href="games/bloonstd/index.html">Bloons TD</a>
         <a href="games/bloonstd2/index.html">Bloons TD 2</a>
       </div>
+         
   </head>
+    
   <body>
     <canvas id="animated-bg"></canvas>
     <div id="welcome-text">Welcome</div>
