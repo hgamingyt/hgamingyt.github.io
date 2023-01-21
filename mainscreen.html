@@ -25,10 +25,13 @@
         animation: fadeIn 2s ease-in-out 1s forwards;
       }
       #games-list {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
+         display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
         font-family: 'Trebuchet MS', sans-serif;
         font-size: 32px;
         color: black;
@@ -38,6 +41,7 @@
         animation: fadeIn 2s ease-in-out 3s forwards;
       }
       #games-list a {
+         z-index: 1;
         color: black;
         text-decoration: none;
         margin: 0 10px;
