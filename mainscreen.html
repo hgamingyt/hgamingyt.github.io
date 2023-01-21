@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  
   <head>
     <title>Goofy Ahhh Website</title>
     <style>
@@ -25,19 +24,11 @@
         opacity: 0;
         animation: fadeIn 2s ease-in-out 1s forwards;
       }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-     #games-list {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+      #games-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
         font-family: 'Trebuchet MS', sans-serif;
         font-size: 32px;
         color: black;
@@ -46,14 +37,14 @@
         opacity: 0;
         animation: fadeIn 2s ease-in-out 3s forwards;
       }
-#games-list a {
-  /* your existing styles here */
-  background-image: radial-gradient(circle at center, #2196F3, #2196F3, #2196F3);
-  padding: 10px;
-  border-radius: 25px;
-  transition: all .2s ease-in-out;
-}
-
+      #games-list a {
+        color: black;
+        text-decoration: none;
+        margin: 0 10px;
+        background-image: radial-gradient(circle at center, #2196F3, #2196F3, #2196F3);
+        padding: 10px;
+        border-radius: 25px;
+        transition: all .2s ease-in-out;
       }
       #games-list a:hover {
         background-image: radial-gradient(circle at center, #2196F3, #2196F3, #2196F3);
@@ -68,20 +59,16 @@
           opacity: 1;
         }
       }
-<div id="games-list" style="display: flex; align-items: center; justify-content: center;">
-    <a href="games/DogeMiner/index.html">Doge Miner</a>
-    <a href="games/motox3m/index.html">MotoX3M</a>
-    <a href="games/among-us/index.html">Among us</a>
-    <a href="games/bloonstd/index.html">Bloons TD</a>
-    <a href="games/bloonstd2/index.html">Bloons TD 2</a>
-</div>
-
-         
+    </style>
   </head>
-    
   <body>
     <canvas id="animated-bg"></canvas>
     <div id="welcome-text">Welcome</div>
+    <div id="games-list">
+            <a href="games/among-us/index.html">Among us</a>
+      <a href="games/bloonstd/index.html">Bloons TD</a>
+      <a href="games/bloonstd2/index.html">Bloons TD 2</a>
+    </div>
     <script>
       var canvas = document.getElementById("animated-bg");
       var ctx = canvas.getContext("2d");
@@ -102,7 +89,6 @@
       }
       animate();
 </script>
-    
 <script>
   function getCookie(name) {
     var value = "; " + document.cookie;
