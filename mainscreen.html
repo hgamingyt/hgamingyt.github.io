@@ -33,7 +33,30 @@
           opacity: 1;
         }
       }
+      #games-list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+#games-list a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
     </style>
+        <div id="games-list">
+      <a href="games/DogeMiner/index.html">Doge Miner</a>
+      <a href="games/motox3m/index.html">MotoX3M</a>
+      <a href="games/among-us/index.html">Among us</a>
+      <a href="games/bloonstd/index.html">Bloons TD</a>
+      <a href="games/bloonstd2/index.html">Bloons TD 2</a>
+    </div>
   </head>
   <body>
     <canvas id="animated-bg"></canvas>
@@ -58,6 +81,7 @@
       }
       animate();
 </script>
+    
 <script>
   function getCookie(name) {
     var value = "; " + document.cookie;
