@@ -99,17 +99,9 @@
       animate();
       <script>
    <script>
-  function getCookie(name) {
-    var value = "; " + document.cookie;
-    var parts = value.split("; " + name + "=");
-    if (parts.length == 2) return parts.pop().split(";").shift();
-  }
-  function checkCookie() {
-    if(!getCookie("loggedIn")){
-      window.location.href = "aswdasdasd/hell.html";
+    if (getCookie("loggedIn") == "false") {
+    window.location.href = "aswdasdasd/hell.html";
     }
-  }
-  checkCookie();
    <script>
   </body>
 </html>
