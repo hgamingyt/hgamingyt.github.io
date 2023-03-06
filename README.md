@@ -1,3 +1,5 @@
-# hgamingyt.github.io
-some games for me and my friends
-sparkles and champagne 
+todo:
+
+fix white background - working on rn
+fix cookie checker
+fix 1v1.lol and doge clicker 2
