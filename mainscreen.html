@@ -97,11 +97,27 @@
         requestAnimationFrame(animate);
       }
       animate();
-      <script>
+      </script>
    <script>
-    if (getCookie("loggedIn") == "false") {
-    window.location.href = "aswdasdasd/hell.html";
+    function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
     }
-   <script>
+    return "";
+}
+
+if (getCookie("loggedIn") == "false") {
+    window.location.href = "aswdasdasd/hell.html";
+}
+   </script>
   </body>
 </html>
