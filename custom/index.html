@@ -1,0 +1,50 @@
+<index>
+
+  <head>    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa&amp;display=swap">
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script type="text/javascript">
+      $('head').append(`<link rel="stylesheet" href="https://${location.hostname}/custom/assets/style.css">`);
+    </script>
+
+    <title>Annotate</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <img id="headerLogo" src="https://cdn-icons-png.flaticon.com/512/3308/3308395.png">
+      <h1 id="headerTitle">Unblockrr</h1>
+      <p id="headerVersion">v5.0.0</p>
+      
+      <button class="headerButton" onclick="showUnblocker();">Unblocker</button>
+      <button class="headerButton" onclick="showMetadata();">Metadata</button>
+      
+    </div>
+    
+    <div id="iframeDiv" align="center">
+      <br>
+      <br>
+      <iframe src="https://google-clone-thecreativist.vercel.app" id="iframe" width="95%" height="83%" style="border: 2px dashed #0082cb;"></iframe>
+    </div>
+    
+    <div id="metaDiv" align="center" style="display: none;">
+      <h2 id="metaHeader">Tab Metadata</h2>
+      
+      <input class="metaInputField" type="text" placeholder="Tab name..." id="nameField">
+      <br><br>
+      <input class="metaInputField" type="text" placeholder="Tab icon..." id="icoField">
+      <h6 id="metaNote">the tab icon must be a valid image URL. to get an image url, find an image, right click it, then copy and paste the image address above.</h6>
+      <p>We've also made quick templates!</p>
+      
+      <button class="metaButton" onclick="drive();">Google Drive</button>
+      <button class="metaButton" onclick="gmail();">Gmail</button>
+      <br><br>
+    </div>
+    
+    <br>
+    <script>
+      $('body').append(`<script src="https://${location.hostname}/custom/assets/script.js"></script>`);
+    </script>
+  </body>
+</index>

@@ -1,0 +1,104 @@
+/* root code */
+body {
+  margin: 0px;
+  font-size: 18px;
+  color: #1876ab;
+  font-family: Comfortaa;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: #D3D3D3;
+}
+
+/* header styles */
+#header {
+  top: 0;
+  background-color: #666666;
+  height: 6.9vw;
+  border-radius: 0 0 1.5vw 1.5vw;
+}
+
+#headerLogo {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  -ms-transform: translateY(-55%);
+  transform: translateY(-55%);
+  width: 5vw;
+  left: 1.5vw;
+}
+
+#headerTitle {
+  position: relative;
+  top: -11.5vh;
+  left: 7.5vw;
+  color: #1aa3f0;
+}
+
+#headerVersion {
+  position: relative;
+  top: -21vh;
+  left: 24vw;
+  color: #1aa3f0;
+}
+
+.headerButton {
+  position: relative;
+  top: -26.1vh;
+  left: 65.9vw;
+  width: 15vw;
+  height: 6vh;
+  font-size: 20px;
+  border-radius: 1vw 1vw 0 0;
+  border: 2px solid #0082cb;
+  border-bottom: none;
+  background-color: #D3D3D3;
+  color: #1876ab;
+  font-family: Comfortaa;
+}
+
+.headerButton:hover {
+  background-color: #bdbbbb;
+}
+
+/* metadata styles */
+#metaHeader {
+  color: #0082cb;
+}
+
+#metaNote {
+  line-height: 3vw;
+  margin-top: 0.1vw;
+}
+
+.metaButton {  
+  width: 300px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px dashed #0082cb;
+  background-color: #D3D3D3;
+  color: #1876ab;
+  font-family: Comfortaa;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+.metaButton:hover {
+  transform: scale(105%);
+}
+
+.metaInputField {
+  font-size: 20px;
+  line-height: 20px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px dashed #0082cb;
+  padding: 2px 4px;
+  width: 75%;
+  background-color: #D3D3D3;
+  color: #1876ab;
+  font-family: Comfortaa;
+  text-align: center;
+}
