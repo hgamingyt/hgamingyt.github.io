@@ -1,0 +1,34 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#particles-js {
+	height: 100vh;
+	width: 100%;
+	background-color: #222;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: #fff;
+}
+
+h1 {
+	font-size: 4em;
+	margin: 0;
+}
+
+p {
+	font-size: 1.5em;
+}
+
