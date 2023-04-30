@@ -1,6 +1,1 @@
-todo:
-
-
-fix cookie checker - working on rn
-
-fix 1v1.lol and doge clicker 2
+im doing a whole redo on the website!
