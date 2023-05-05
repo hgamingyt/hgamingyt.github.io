@@ -2,40 +2,9 @@
 <html>
   <head>
     <title>Login Screen</title>
-   
-</body>
-</html>
- <style><!-- particles.js container -->
-<div id="particles-js"></div>
-
-<!-- scripts -->
-<script src="../particles.js"></script>
-<script src="js/app.js"></script>
-
-<!-- stats.js -->
-<script src="js/lib/stats.js"></script>
-<script>
-  var count_particles, stats, update;
-  stats = new Stats;
-  stats.setMode(0);
-  stats.domElement.style.position = 'absolute';
-  stats.domElement.style.left = '0px';
-  stats.domElement.style.top = '0px';
-  document.body.appendChild(stats.domElement);
-  count_particles = document.querySelector('.js-count-particles');
-  update = function() {
-    stats.begin();
-    stats.end();
-    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-    }
-    requestAnimationFrame(update);
-  };
-  requestAnimationFrame(update);
-</script>
-
+    <style>
       /* Add some styling to the page */
-      body {       
+      body {
         background-color: #2c3e50;
         color: white;
         font-family: 'Source Code Pro', monospace;
@@ -100,33 +69,3 @@ function checkPassword() {
         alert("Incorrect password. Please try again.");
     }
 }
-
-function setCookie(cname, cvalue) {
-    var d = new Date();
-    d.setTime(d.getTime() + (365*24*60*60*1000));
-    var expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-function getCookie(cname) {
-    var name = cname + "=";
-    var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
-    for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-
-if (getCookie("loggedIn") == "true") {
-    window.location.href = "mainscreen.html";
-}
-    </script>
-    <script>
-  </body>
-</html>
