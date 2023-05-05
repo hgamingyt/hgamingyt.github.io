@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Goofy Ahhh Website</title>
+    <title>silly</title>
     <style>
       body{
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUT5N0jvDNA8lcL2kviMYR5iKAIji-vMTE_g&usqp=CAU');
         margin:0;
         padding:0;
         overflow:hidden;
@@ -78,26 +79,6 @@
       <a href="games/1v1-lol/index.html">1v1.lol (I dont think this is working)</a>
       <a href="games/Slope/index.html">Slope</a>
     </div>
-    <script>
-      var canvas = document.getElementById("animated-bg");
-      var ctx = canvas.getContext("2d");
-      var lightBlue = '#87CEEB';
-      var darkPink = '#FF69B4';
-      var x = 0;
-      function animate() {
-        var gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
-        gradient.addColorStop(x, lightBlue);
-        gradient.addColorStop(x + 0.5, darkPink);
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        x += 0.01;
-        if (x >= 1.0) {
-          x = 0;
-        }
-        requestAnimationFrame(animate);
-      }
-      animate();
-    </script>
    <script>
 function getCookie(name) {
     var dc = document.cookie;
