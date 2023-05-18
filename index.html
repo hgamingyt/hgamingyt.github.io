@@ -51,13 +51,15 @@
     </style>
     <script>
       function checkPassword() {
-    var password = document.getElementById("passwordInput").value;
-    if (validPasswords.includes(password)) {
-        setCookie("loggedIn", true, 1);
-        window.location.href = "index.html";
-        validPasswords.splice(validPasswords.indexOf(password), 1);
-    } else {
-        alert("Incorrect password. Please try again.");;
+        var password = document.getElementById("passwordInput").value;
+        if (validPasswords.includes(password)) {
+            setCookie("loggedIn", true, 1);
+            window.location.href = "index.html";
+            validPasswords.splice(validPasswords.indexOf(password), 1);
+        } else {
+            alert("Incorrect password. Please try again.");
+        }
+      }
     </script>
   </head>
   <body>
@@ -68,6 +70,7 @@
       <button type="button" onclick="checkPassword()">Submit</button>
     </form>
     <script>
-  var validPasswords = ["beta"]; xbcxbc
-    }
-}
+      var validPasswords = ["beta"];
+    </script>
+  </body>
+</html>
