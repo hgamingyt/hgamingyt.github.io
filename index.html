@@ -3,71 +3,81 @@
 <head>
   <title>silly :p</title>
   <style>
-      /* Add some styling to the page */
-      body {
-        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUT5N0jvDNA8lcL2kviMYR5iKAIji-vMTE_g&usqp=CAU');
-        background-color: #2c3e50;
-        color: white;
-        font-family: 'Source Code Pro', monospace;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-      }
-      /* Add some styling to the form */
-      form {
-        background-color: #34495e;
-        padding: 2em;
-        border-radius: 1em;
-        box-shadow: 0px 0px 10px 0px #000;
-      }
-      /* Add some styling to the input field */
-      input[type="password"] {
-        background-color: #ecf0f1;
-        border: none;
-        color: #000;
-        font-size: 1.2em;
-        padding: 0.5em;
-        margin-bottom: 1em;
-        border-radius: 0.5em;
-        width: 80%;
-      }
-      /* Add some styling to the submit button */
-      button[type="button"] {
-        background-color: #3498db;
-        color: #fff;
-        border: none;
-        padding: 0.5em 1em;
-        font-size: 1.2em;
-        border-radius: 0.5em;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-      }
-      /* Add some hover effect to the submit button */
-      button[type="button"]:hover {
-        background-color: #2980b9;
-      }
+    /* Add some styling to the page */
+    body {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUT5N0jvDNA8lcL2kviMYR5iKAIji-vMTE_g&usqp=CAU');
+      background-color: #2c3e50;
+      color: white;
+      font-family: 'Source Code Pro', monospace;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    /* Add some styling to the form */
+    form {
+      background-color: #34495e;
+      padding: 2em;
+      border-radius: 1em;
+      box-shadow: 0px 0px 10px 0px #000;
+    }
+    /* Add some styling to the input field */
+    input[type="password"] {
+      background-color: #ecf0f1;
+      border: none;
+      color: #000;
+      font-size: 1.2em;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      border-radius: 0.5em;
+      width: 80%;
+    }
+    /* Add some styling to the submit button */
+    button[type="button"] {
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      padding: 0.5em 1em;
+      font-size: 1.2em;
+      border-radius: 0.5em;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+    /* Add some hover effect to the submit button */
+    button[type="button"]:hover {
+      background-color: #2980b9;
+    }
   </style>
   <script>
-      function checkPassword() {
-        var password = document.getElementById("passwordInput").value;
-        if (validPasswords.includes(password)) {
-            setCookie("loggedIn", true, 1);
-            window.location.href = "index.html";
-            validPasswords.splice(validPasswords.indexOf(password), 1);
-        } else {
-            alert("Incorrect password. Please try again.");
-        }
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+        expires = "; expires=" + date.toUTCString();
       }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function checkPassword() {
+      var password = document.getElementById("passwordInput").value;
+      var validPasswords = ["beta"];
+      if (validPasswords.includes(password)) {
+        setCookie("loggedIn", true, 1);
+        window.location.href = "index.html";
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
   </script>
 </head>
 <body>
   <form>
-    <h1>wsg, if you want to buy a password go to - (not out yet just type in "beta")</h1><label for="passwordInput">Password:</label> <input type="password" id="passwordInput"> <button type="button" onclick="checkPassword()">Submit</button>
+    <h1>wsg, if you want to buy a password go to - (not out yet just type in "beta")</h1>
+    <label for="passwordInput">Password:</label>
+    <input type="password" id="passwordInput">
+    <button type="button" onclick="checkPassword()">Submit</button>
   </form>
-  <script>
-      var validPasswords = ["beta"];
-  </script>
 </body>
 </html>
